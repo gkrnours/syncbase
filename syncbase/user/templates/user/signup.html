@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+
+{% block subtitle %}<h2>Login</h2>{% endblock %}
+
+{% block main %}
+	<h3>Need an account?</h3>
+	<form method=post>
+	<fieldset class=form-group>
+		{% csrf_token %}
+		{% include "form.html" with form=new_account_form%}
+		{% include "submit.html" with face="Create your account" %}
+	</fieldset>
+	</form>
+
+{% endblock %}

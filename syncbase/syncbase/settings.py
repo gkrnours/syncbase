@@ -25,12 +25,14 @@ SECRET_KEY = 'sho-xvo-s&l*6fqk1&72k8l93!%8$8x2$y&5^qs(g^=f0^xc$l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'syncbase',
+    'user',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,3 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_URL = "user:login"
+LOGIN_REDIRECT_URL = "user:basic"
+DEFAULT_FROM_EMAIL = "webmaster@casting.mattic.org"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

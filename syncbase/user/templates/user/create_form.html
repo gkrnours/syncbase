@@ -1,0 +1,15 @@
+{% extends 'user/base.html' %}
+
+{% block subtitle %}
+	<h2>Register</h2>
+{% endblock %}
+
+{% block main %}
+	<form method=post>
+	<fieldset>
+		{% csrf_token %}
+		{% include "form.html" %}
+			<button class="btn btn-primary">Create</button>
+	</fieldset>
+	</form>
+{% endblock %}

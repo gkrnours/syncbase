@@ -1,0 +1,8 @@
+{% extends "user/base.html" %}
+
+{% block subtitle %}<h2>{{ title }}</h2>{% endblock %}
+
+{% block main %}
+	<p>We hope you had a nice stay.</p>
+	<p><a href="{% url 'user:login' %}">Log in again?</a>
+{% endblock %}

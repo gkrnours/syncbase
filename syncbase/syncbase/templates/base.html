@@ -1,0 +1,38 @@
+<!doctype html>
+{% load staticfiles i18n %}
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<title>{% block title %}SyncBase{% endblock %}</title>
+<link rel=stylesheet href="{% static "iridescent.css" %}">
+{% block head %}{% endblock %}
+
+{% trans "Profil" as label_profil %}
+{% trans "Logout" as label_logout %}
+{% trans "Login" as label_login %}
+
+<div id=wrap>
+	<header>
+		<h1><a href="{# url misc:home #}">SyncBase</a></h1>
+	</header>
+
+	<nav>
+		<h3>Menu</h3>
+		<ul>
+			{% if user.is_authenticated %}
+			<li><a href="{% url "user:basic" %}">{{ label_profil }}</a>
+			<li><a href="{% url "user:logout" %}">{{ label_logout }}</a>
+			{% else %}
+			<li><a href="{% url "user:login" %}">{{ label_login }}</a>
+			{% endif %}
+		</ul>
+	</nav>
+
+	<main>{% block body %}{% endblock %}</main>
+
+</div>
+
+<footer>
+	SyncBase &ndash; 2017
+</footer>
+

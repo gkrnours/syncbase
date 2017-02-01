@@ -1,0 +1,129 @@
+html {
+	overflow-y: scroll;
+}
+html, body{
+	height: 100%;
+	margin: 0;
+	background: black;
+	color: orchid; font-family: monospace;
+}
+#wrap, footer{
+	width: 800px;
+	margin: auto;
+}
+#wrap{
+	min-height: 100%;
+	margin-bottom: -72px;
+}
+#wrap:after{
+	content: "";
+	display: block;
+	height: 40px;
+}
+#wrap + footer{
+	height: 39px;
+	padding-top: 16px;
+	margin-top: 16px;
+	border-top: 1px solid orchid;
+}
+header {
+	margin-bottom: 16px;
+}
+#wrap > header{
+	border-bottom: 2px solid aqua;
+}
+article {
+	border-left: 2px solid orchid;
+	padding-left: 16px;
+}
+#wrap > nav {
+	float: left;
+	width: 200px;
+}
+#wrap > main {
+	margin-left: 200px;
+}
+nav.paginator {
+	margin: 16px 0;
+	text-align: right;
+}
+h1, h1 a:visited, h2, h2 a:visited, h3, h3 a:visited,
+h4, h4 a:visited, h5, h5 a:visited, h6, h6 a:visited{
+	color: aqua;
+	margin:0 0 0 0;
+}
+h1{
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+h2{
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+h3{
+	margin-top: 10px;
+}
+hr {
+	border: 1px solid orchid;
+}
+a{
+	color: aqua;
+}
+a:visited{
+	color: steelblue;
+}
+
+ul{
+	list-style: inside square;
+	padding-left: 5px;
+}
+
+p{
+	margin: 0px 0px 10px;
+}
+
+fieldset {
+	margin: 8px 0;
+	border: 1px solid orchid;
+}
+fieldset legend {
+	padding: 0 8px;
+	border: 1px solid orchid;
+	border-width: 0 1px;
+}
+fieldset li {
+	margin-bottom: 4px;
+}
+fieldset label {
+	display: inline-block;
+	width: 120px;
+}
+input {
+	margin-left: 3px; padding-left: 4px;
+	background: black;
+	color: orchid;
+	font-family: monospace;
+	border: 0;
+	border-left: 1px solid orchid;
+	border-bottom: 1px solid orchid;
+	outline: none;
+}
+input:focus {
+	margin-left: 0px;
+	border-color: fuchsia;
+	border-left-width: 4px;
+}
+button {
+	padding: 4px 16px;
+	margin-left: 2px;
+	background: black;
+	color: orchid;
+	border: 2px outset orchid;
+}
+button:hover, button:focus {
+	margin-left: 0px;
+	border-color: fuchsia;
+	border-width: 2px 4px;
+	outline: none;
+	cursor: pointer;
+}
